@@ -21,7 +21,7 @@ const Home = () => {
     let rotation = [0, 0, 0];
 
     if (window.innerWidth < 768) {
-      scale = [0.9, 0.9, 0.9];
+      scale = [0.7, 0.7, 0.7];
     } else {
       scale = [1, 1, 1];
     }
