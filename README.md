@@ -1,7 +1,8 @@
 # Dancing Alice/Arisu
 
 Dancing Alice Website in 3D :)
-Turn on music (Bottom Left)
+
+NOTE: Turn on music (Bottom Left)
 
 ## Installation
 
