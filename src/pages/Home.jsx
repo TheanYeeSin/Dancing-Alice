@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/no-unknown-property */
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
@@ -16,13 +17,13 @@ const Home = () => {
 
   const adjustAliceForScreenSize = () => {
     let scale = null;
-    let position = [0, -0.5, 0];
-    let rotation = [0.2, 0, 0];
+    let position = [0, -0.1, 4.7];
+    let rotation = [0, 0, 0];
 
     if (window.innerWidth < 768) {
-      scale = [9, 9, 9];
+      scale = [0.9, 0.9, 0.9];
     } else {
-      scale = [10, 10, 10];
+      scale = [1, 1, 1];
     }
     return [scale, position, rotation];
   };
@@ -42,7 +43,7 @@ const Home = () => {
     <section className="w-full h-screen relative">
       <Canvas
         className="w-full h-screen bg-transparent"
-        camera={{ near: 0.1, far: 1000 }}
+        camera={{ near: 0.1, far: 2000 }}
       >
         <Suspense fallback={<Loader />}>
           <Alice
@@ -56,7 +57,7 @@ const Home = () => {
         <img
           src={isPlayingMusic ? soundOn : soundOff}
           alt="sound"
-          className="w-10 h-10 cursor-pointer object-contain"
+          className="w-12 h-12 cursor-pointer object-contain"
           onClick={() => setIsPlayingMusic(!isPlayingMusic)}
         />
       </div>
