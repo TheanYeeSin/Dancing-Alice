@@ -1,8 +1,26 @@
-# React + Vite
+# Dancing Alice/Arisu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dancing Alice Website in 3D :)
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+git clone
+```
+
+```
+npm install
+```
+
+```
+npm run dev
+```
+
+## Technical Domain
+
+- Vite + React
+- React-Three-Fiber for rendering 3D object
+
+## Screenshot
+
+![image](https://github.com/TheanYeeSin/Dancing-Alice/assets/68727045/0c0eb917-5f8d-4648-ba38-105c7bbffe67)
