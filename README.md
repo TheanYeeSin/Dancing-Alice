@@ -22,6 +22,7 @@ npm run dev
 
 - Vite + React
 - React-Three-Fiber for rendering 3D object
+- TailwindCSS
 
 ## Screenshot
 
