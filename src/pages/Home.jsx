@@ -34,7 +34,6 @@ const Home = () => {
     }
     return () => {
       audioRef.current.pause();
-      console.log("test");
     };
   });
 
