@@ -17,7 +17,7 @@ const Home = () => {
 
   const adjustAliceForScreenSize = () => {
     let scale = null;
-    let position = [0, -0.1, 4.7];
+    let position = [0, -0.1, 1];
     let rotation = [0, 0, 0];
 
     if (window.innerWidth < 768) {
@@ -43,7 +43,7 @@ const Home = () => {
     <section className="w-full h-screen relative">
       <Canvas
         className="w-full h-screen bg-transparent"
-        camera={{ near: 0.1, far: 2000 }}
+        camera={{ near: 0.01, far: 2000 }}
       >
         <Suspense fallback={<Loader />}>
           <Alice

@@ -3,18 +3,23 @@ import { useRef, useEffect } from "react";
 import aliceScene from "../assets/Alice.glb";
 import { useAnimations, useGLTF } from "@react-three/drei";
 import { a } from "@react-spring/three";
+import { useFrame } from "@react-three/fiber";
 
 const Alice = (props) => {
-  const group = useRef();
+  const ref = useRef();
   const { nodes, materials, animations } = useGLTF(aliceScene);
-  const { actions } = useAnimations(animations, group);
+  const { actions } = useAnimations(animations, ref);
 
   useEffect(() => {
     actions["Animation"].play();
   }, [actions]);
 
+  useFrame(() => {
+    if (ref.current.position.z < 4.7) ref.current.position.z += 0.01;
+  });
+
   return (
-    <a.group ref={group} {...props}>
+    <a.group ref={ref} {...props}>
       <a.group name="Sketchfab_Scene">
         <a.group
           name="Sketchfab_model"
